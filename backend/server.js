@@ -12,7 +12,7 @@ import userRoutes from './routes/users.js';
 import messageRoutes from './routes/messages.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const PORT = 5024;
+const PORT = process.env.PORT || 5024;
 
 const dataDir = join(__dirname, 'data');
 if (!existsSync(dataDir)) mkdirSync(dataDir, { recursive: true });

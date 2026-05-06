@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken';
 
-export const JWT_SECRET = 'chotot_jwt_secret_2024';
+export const JWT_SECRET = process.env.JWT_SECRET || 'chotot_jwt_secret_2024';
 
 export const authMiddleware = (req, res, next) => {
   const token = req.headers.authorization?.split(' ')[1];
